@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model EmailJob {
+  id                 String    @id @default(cuid())
+  bullmqJobId        String?   @unique
+  recipient          String
+  senderProfile      String    @default("Salman <salman@reachinbox.ai>")
+  subject            String
+  body               String
+  status             String    @default("SCHEDULED") // SCHEDULED, PROCESSING, SENT, FAILED, CANCELLED
+  scheduledAt        DateTime
+  sentAt             DateTime?
+  etherealPreviewUrl String?
+  etherealMessageId  String?
+  errorMessage       String?
+  attempts           Int       @default(0)
+  maxAttempts        Int       @default(3)
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+
+  @@index([status])
+  @@index([scheduledAt])
+  @@index([createdAt])
+}

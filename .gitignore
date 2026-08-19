@@ -1,0 +1,21 @@
+# Node dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Production builds
+dist/
+backend/dist/
+frontend/dist/
+
+# Database files & logs
+*.db
+*.db-journal
+backend/prisma/*.db
+backend/prisma/*.db-journal
+*.log
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
