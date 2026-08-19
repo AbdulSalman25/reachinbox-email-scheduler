@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ReachInbox Full-Stack Email Job Scheduler - Complete Project Guide</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 10.5pt;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Cover / Header */
+    .header-box {
+      border: 2px solid #0284c7;
+      border-radius: 16px;
+      padding: 24px;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #0284c7;
+      color: #ffffff;
+      font-size: 8.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #0c4a6e;
+      margin: 4px 0 8px 0;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 11pt;
+      color: #0369a1;
+      font-weight: 500;
+      margin: 0 0 16px 0;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 12px 16px;
+      border: 1px solid #bae6fd;
+      font-size: 9.5pt;
+    }
+
+    .meta-item strong {
+      color: #0369a1;
+    }
+
+    /* Section Headings */
+    h2 {
+      font-size: 13.5pt;
+      font-weight: 800;
+      color: #0c4a6e;
+      border-bottom: 2px solid #e0f2fe;
+      padding-bottom: 6px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      page-break-after: avoid;
+    }
+
+    h3 {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0369a1;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      page-break-after: avoid;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin: 0 0 12px 0;
+      padding-left: 22px;
+      color: #334155;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    /* Cards & Containers */
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+
+    .card-highlight {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-left: 4px solid #0284c7;
+    }
+
+    .card-success {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid #16a34a;
+    }
+
+    .card-warning {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid #d97706;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+
+    th {
+      background: #0284c7;
+      color: #ffffff;
+      text-align: left;
+      padding: 8px 10px;
+      font-weight: 700;
+      border: 1px solid #0284c7;
+    }
+
+    td {
+      padding: 7px 10px;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    /* Code Blocks */
+    code {
+      font-family: 'JetBrains Mono', Consolas, monospace;
+      font-size: 8.5pt;
+      background: #f1f5f9;
+      color: #0284c7;
+      padding: 2px 5px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+    }
+
+    pre {
+      font-family: 'JetBrains Mono', Consolas, monospace;
+      font-size: 8.5pt;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 8px 0 12px 0;
+      line-height: 1.45;
+      page-break-inside: avoid;
+    }
+
+    pre code {
+      background: transparent;
+      color: #f8fafc;
+      padding: 0;
+      border: none;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 8.5pt;
+      color: #94a3b8;
+      margin-top: 24px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- COVER HEADER -->
+  <div class="header-box">
+    <div class="badge">ReachInbox Technical Assignment</div>
+    <h1>Full-Stack Email Job Scheduler</h1>
+    <div class="subtitle">Production-Grade Delayed Email Queue, Ethereal SMTP & React SaaS Dashboard</div>
+
+    <div class="meta-grid">
+      <div class="meta-item"><strong>Candidate:</strong> Salman (AbdulSalman25)</div>
+      <div class="meta-item"><strong>Role:</strong> Software Development Intern</div>
+      <div class="meta-item"><strong>Repository:</strong> <a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler" style="color: #0284c7; text-decoration: none; font-weight: bold;">github.com/AbdulSalman25/reachinbox-email-scheduler</a></div>
+      <div class="meta-item"><strong>Date:</strong> August 19, 2026 · Status: 100% Complete</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: PROBLEM STATEMENT -->
+  <h2>1. Problem Statement & Assignment Objectives</h2>
+  <p>
+    At <strong>ReachInbox.ai</strong>, reliable scheduling and automated dispatch of cold email outreach sequences at scale is a mission-critical infrastructure requirement. Simple in-memory timers (<code>setTimeout</code>) or cron jobs fail in real production because:
+  </p>
+  <ul>
+    <li><strong>Server Crashes / Restarts:</strong> In-memory queues lose all scheduled tasks immediately on process restart.</li>
+    <li><strong>Cron Inefficiency:</strong> Cron jobs poll databases on fixed intervals, creating race conditions, duplicate dispatches, and CPU waste.</li>
+    <li><strong>Rate Limiting & Burst Protection:</strong> Without queue-level throttling, sending bulk emails triggers SMTP provider rate limits.</li>
+  </ul>
+  <p>
+    <strong>Core Assignment Goal:</strong> Build a fault-tolerant email scheduler service and modern SaaS dashboard that accepts email scheduling requests via REST API & UI, persists them using <strong>BullMQ + Redis</strong> delayed sorted sets (surviving abrupt restarts), sends via <strong>Ethereal Fake SMTP</strong> with live rendered web preview links, and provides full lifecycle controls (Reschedule, Cancel, Throttling).
+  </p>
+
+  <!-- SECTION 2: SYSTEM ARCHITECTURE -->
+  <h2>2. System Architecture & Tech Stack</h2>
+  <div class="card card-highlight">
+    <strong>Architecture Diagram Flow:</strong><br>
+    <code>[React Client UI]</code> ➔ <code>[Express REST API (/api/emails/schedule)]</code> ➔ <code>[Prisma ORM (dev.db)]</code> ➔ <code>[Redis Sorted Sets (BullMQ)]</code> ➔ <code>[BullMQ Worker Concurrency 5]</code> ➔ <code>[Nodemailer + Ethereal SMTP]</code> ➔ <code>[Live Web Preview URL]</code>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Layer</th>
+        <th>Technology</th>
+        <th>Key Purpose in Solution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Backend API</strong></td>
+        <td>Node.js, Express.js, TypeScript</td>
+        <td>Type-safe REST API with Zod schema validation and structured error handling.</td>
+      </tr>
+      <tr>
+        <td><strong>Job Queue Engine</strong></td>
+        <td>BullMQ + ioredis (Redis 7+)</td>
+        <td>Persistent delayed job scheduling using Redis sorted sets (<code>zset</code>). Zero cron jobs.</td>
+      </tr>
+      <tr>
+        <td><strong>Database & ORM</strong></td>
+        <td>Prisma ORM (SQLite / PostgreSQL)</td>
+        <td>Tracks job metadata, recipient logs, retry counters, and Ethereal preview links.</td>
+      </tr>
+      <tr>
+        <td><strong>Fake SMTP Service</strong></td>
+        <td>Nodemailer + Ethereal Email</td>
+        <td>Transports real emails to Ethereal test inbox and captures live preview URLs.</td>
+      </tr>
+      <tr>
+        <td><strong>Frontend Dashboard</strong></td>
+        <td>React 18, Vite, Tailwind CSS</td>
+        <td>White & Sky Blue theme matching ReachInbox SaaS UI with metric cards & pill tabs.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 3: SERVER RESTART RESILIENCE -->
+  <h2>3. How Server Restart Resilience Works (BullMQ + Redis)</h2>
+  <div class="card card-success">
+    <strong>Key Architectural Advantage:</strong> Unlike memory queues, BullMQ writes delayed tasks directly to Redis as sorted sets where the score is the target Unix execution timestamp (<code>now + delayMs</code>).
+  </div>
+  <ol>
+    <li><strong>Job Enqueueing:</strong> When an email is scheduled, BullMQ computes <code>delay = scheduledAt - now</code> and persists the job payload in Redis under key <code>bull:email-scheduler-queue:delayed</code>.</li>
+    <li><strong>Crash & Restart:</strong> If the Express server or Worker process terminates abruptly, Redis persistence (<code>AOF / RDB</code>) retains the delayed sorted set unharmed.</li>
+    <li><strong>Worker Discovery:</strong> When the backend server restarts, the BullMQ Worker automatically reconnects to Redis, re-evaluates the delayed sorted set, and executes the pending jobs at the exact target time.</li>
+    <li><strong>Zero Duplicates:</strong> Distributed locks (atomic Lua scripts) ensure that only a single worker acquires and processes each email job once.</li>
+  </ol>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 4: STEP-BY-STEP IMPLEMENTATION LOG -->
+  <h2>4. Step-by-Step Implementation Journey</h2>
+
+  <h3>Step 1: Project Scaffolding & Monorepo Setup</h3>
+  <p>Initialized a unified TypeScript monorepo with <code>backend/</code> and <code>frontend/</code> directories, configured TypeScript in strict mode, and set up Docker Compose for Redis and PostgreSQL.</p>
+
+  <h3>Step 2: Database Schema & Prisma Configuration</h3>
+  <p>Created the <code>EmailJob</code> model in <code>backend/prisma/schema.prisma</code> tracking <code>recipient</code>, <code>senderProfile</code>, <code>subject</code>, <code>body</code>, <code>scheduledAt</code>, <code>sentAt</code>, <code>status</code> (SCHEDULED, PROCESSING, SENT, FAILED, CANCELLED), <code>etherealPreviewUrl</code>, and <code>attempts</code>.</p>
+
+  <h3>Step 3: Redis Connection & BullMQ Queue</h3>
+  <p>Configured <code>src/config/redis.ts</code> and <code>src/services/queue.service.ts</code> with retry policies, backoff options (3 attempts, 5s delay), and job lifecycle methods (schedule, reschedule, remove).</p>
+
+  <h3>Step 4: Background Worker & Ethereal SMTP</h3>
+  <p>Built <code>src/workers/email.worker.ts</code> and <code>src/config/mailer.ts</code>. The worker listens on BullMQ, updates status to <code>PROCESSING</code>, dispatches the email via Nodemailer, extracts the Ethereal web URL (<code>nodemailer.getTestMessageUrl(info)</code>), and records status as <code>SENT</code>.</p>
+
+  <h3>Step 5: Throttling & Bulk Lead Staggering</h3>
+  <p>Enhanced <code>src/services/email.service.ts</code> to support CSV/bulk imports with <code>minDelayPerSend</code> staggering (e.g. 2s between leads) and computed hourly sending limits (200/hr quota telemetry).</p>
+
+  <h3>Step 6: Automated End-to-End Verification Suite</h3>
+  <p>Built <code>backend/tests/scheduler.test.ts</code> verifying delayed queueing, real-time cancellation, rescheduling, SMTP delivery with live URLs, and <strong>simulated worker crash/restart recovery</strong> (100% passing).</p>
+
+  <h3>Step 7: White & Sky Blue Modern Frontend</h3>
+  <p>Engineered a sleek React + Tailwind CSS dashboard with ReachInbox branding, center pill switcher (<code>Scheduled Emails</code> vs <code>Sent Emails</code>), 5 metric cards, CSV upload campaign modal, and live <code>View Email ↗</code> links.</p>
+
+  <h3>Step 8: Git & GitHub Publishing</h3>
+  <p>Configured clean repository at <strong><code>https://github.com/AbdulSalman25/reachinbox-email-scheduler</code></strong> authored solely by <strong>AbdulSalman25</strong>.</p>
+
+  <!-- SECTION 5: CREDENTIALS & COMMANDS CHEAT SHEET -->
+  <h2>5. Credentials, URLs & Command Reference</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Value / Link</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>GitHub Repository</strong></td>
+        <td><code>https://github.com/AbdulSalman25/reachinbox-email-scheduler</code></td>
+        <td>Public repository with full code, tests & README</td>
+      </tr>
+      <tr>
+        <td><strong>Frontend Dashboard</strong></td>
+        <td><code>http://localhost:5173</code></td>
+        <td>Vite React dev server with proxy to backend</td>
+      </tr>
+      <tr>
+        <td><strong>Backend API</strong></td>
+        <td><code>http://localhost:5001</code></td>
+        <td>Express.js API server & static asset host</td>
+      </tr>
+      <tr>
+        <td><strong>Ethereal SMTP Host</strong></td>
+        <td><code>smtp.ethereal.email:587</code></td>
+        <td>Automatic test account provisioned on startup</td>
+      </tr>
+      <tr>
+        <td><strong>Ethereal Web Viewer</strong></td>
+        <td><code>https://ethereal.email/login</code></td>
+        <td>Live preview links generated for every send</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Terminal Setup & Run Commands</h3>
+  <pre><code># 1. Start Redis
+brew services start redis   # or: docker compose up -d redis
+
+# 2. Run Backend (Port 5001)
+cd backend && npm run dev
+
+# 3. Run Frontend (Port 5173)
+cd frontend && npm run dev
+
+# 4. Run Automated Test Suite
+cd backend && npm test</code></pre>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 6: TECHNICAL INTERVIEW Q&A -->
+  <h2>6. Technical Interview & Viva Guide</h2>
+
+  <div class="card card-highlight">
+    <strong>Q1: Why BullMQ + Redis over Cron Jobs (node-cron)?</strong><br>
+    <em>Answer:</em> Cron jobs are interval-based pollers that query the DB repeatedly, wasting CPU cycles and causing synchronization bottlenecks across multi-instance clusters. BullMQ uses Redis sorted sets to hold delayed jobs and activates workers via event-driven pub/sub and atomic Lua scripts precisely when the Unix timestamp elapses, with built-in concurrency control and crash recovery.
+  </div>
+
+  <div class="card card-highlight">
+    <strong>Q2: How does the system guarantee no double-sends on server crashes?</strong><br>
+    <em>Answer:</em> BullMQ uses atomic lock leases (<code>lockDuration: 30000ms</code>). When a worker begins processing, it claims exclusive lock ownership. If the server crashes during execution, the lock expires after the stalled interval (<code>stalledInterval: 15000ms</code>), and a restarted worker resumes the job cleanly without duplicate executions.
+  </div>
+
+  <div class="card card-highlight">
+    <strong>Q3: How is rate limiting and throttling enforced?</strong><br>
+    <em>Answer:</em> The scheduler computes staggered delay offsets for batch leads: <code>itemDelayMs = baseDelayMs + (index * minDelaySeconds * 1000)</code>. Additionally, the backend tracks hourly quota dispatches and blocks incoming schedules that exceed the 200 emails/hour threshold.
+  </div>
+
+  <div class="card card-highlight">
+    <strong>Q4: How do you verify emails without hitting spam filters or real users?</strong><br>
+    <em>Answer:</em> We integrated Nodemailer with Ethereal SMTP test accounts. Ethereal simulates full RFC-compliant SMTP handshakes, accepts emails, and generates a live rendered web viewer URL (<code>nodemailer.getTestMessageUrl(info)</code>) displayed directly in the dashboard UI.
+  </div>
+
+  <!-- SECTION 7: 2-MINUTE DEMO SCRIPT -->
+  <h2>7. 2-Minute Video Demo Script</h2>
+  <div class="card card-success">
+    <strong>Step 1: Introduction (0:00 - 0:30)</strong><br>
+    "Hi, I'm Salman. This is my submission for the ReachInbox Full-Stack Email Job Scheduler assignment. The system is built with TypeScript, Express, BullMQ, Redis, Prisma, and a React Tailwind dashboard."
+    <br><br>
+    <strong>Step 2: Architecture & Queue Explanation (0:30 - 1:00)</strong><br>
+    "Instead of fragile cron jobs or in-memory timers, all scheduling is handled by persistent BullMQ delayed jobs backed by Redis sorted sets. This guarantees that jobs survive server crashes and restarts without duplicate sends or lost tasks."
+    <br><br>
+    <strong>Step 3: Live Dashboard Demo (1:00 - 1:45)</strong><br>
+    "Here on the dashboard at <code>localhost:5173</code>, I click <code>+ Compose Email</code>, auto-fill sample leads, set a 30-second delay with a 2-second throttle, and click Schedule. We can see the real-time countdown in the Scheduled Emails tab. Once processed, it moves to the Sent Emails tab, and clicking <code>View Email ↗</code> opens the live rendered HTML email in Ethereal's web viewer."
+    <br><br>
+    <strong>Step 4: Tests & Wrap Up (1:45 - 2:00)</strong><br>
+    "All backend APIs, lifecycle actions (reschedule, cancel), and server restart survival are verified with a 100% passing automated test suite. The complete codebase is available on my GitHub at <code>github.com/AbdulSalman25/reachinbox-email-scheduler</code>. Thank you!"
+  </div>
+
+  <div class="footer-note">
+    ReachInbox Full-Stack Email Job Scheduler · Prepared for Salman (AbdulSalman25) · August 2026
+  </div>
+
+</body>
+</html>
