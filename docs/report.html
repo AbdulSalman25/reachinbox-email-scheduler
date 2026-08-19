@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ReachInbox Full-Stack Email Job Scheduler - Complete Project Guide</title>
+  <title>ReachInbox Full-Stack Email Job Scheduler - Master Technical Documentation & Credentials</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
 
     @page {
       size: A4;
-      margin: 18mm 16mm 18mm 16mm;
+      margin: 16mm 14mm 16mm 14mm;
     }
 
     * {
@@ -21,19 +21,30 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       color: #0f172a;
       background: #ffffff;
-      line-height: 1.55;
-      font-size: 10.5pt;
+      line-height: 1.5;
+      font-size: 10pt;
       margin: 0;
       padding: 0;
     }
 
-    /* Cover / Header */
+    /* Links */
+    a {
+      color: #0284c7;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    a:hover {
+      color: #0369a1;
+    }
+
+    /* Header Banner */
     .header-box {
       border: 2px solid #0284c7;
-      border-radius: 16px;
-      padding: 24px;
+      border-radius: 14px;
+      padding: 20px;
       background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       page-break-inside: avoid;
     }
 
@@ -41,39 +52,39 @@
       display: inline-block;
       background: #0284c7;
       color: #ffffff;
-      font-size: 8.5pt;
+      font-size: 8pt;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       padding: 4px 10px;
       border-radius: 9999px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     h1 {
-      font-size: 20pt;
+      font-size: 18pt;
       font-weight: 800;
       color: #0c4a6e;
-      margin: 4px 0 8px 0;
+      margin: 4px 0 6px 0;
       line-height: 1.2;
     }
 
     .subtitle {
-      font-size: 11pt;
+      font-size: 10.5pt;
       color: #0369a1;
       font-weight: 500;
-      margin: 0 0 16px 0;
+      margin: 0 0 14px 0;
     }
 
     .meta-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 8px;
       background: #ffffff;
       border-radius: 10px;
-      padding: 12px 16px;
+      padding: 10px 14px;
       border: 1px solid #bae6fd;
-      font-size: 9.5pt;
+      font-size: 9pt;
     }
 
     .meta-item strong {
@@ -82,49 +93,47 @@
 
     /* Section Headings */
     h2 {
-      font-size: 13.5pt;
+      font-size: 12.5pt;
       font-weight: 800;
       color: #0c4a6e;
       border-bottom: 2px solid #e0f2fe;
-      padding-bottom: 6px;
-      margin-top: 24px;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
+      padding-bottom: 5px;
+      margin-top: 20px;
+      margin-bottom: 10px;
       page-break-after: avoid;
     }
 
     h3 {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: 700;
       color: #0369a1;
-      margin-top: 14px;
-      margin-bottom: 6px;
+      margin-top: 12px;
+      margin-bottom: 5px;
       page-break-after: avoid;
     }
 
     p {
-      margin: 0 0 10px 0;
+      margin: 0 0 8px 0;
       color: #334155;
     }
 
     ul, ol {
-      margin: 0 0 12px 0;
-      padding-left: 22px;
+      margin: 0 0 10px 0;
+      padding-left: 20px;
       color: #334155;
     }
 
     li {
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
-    /* Cards & Containers */
+    /* Cards */
     .card {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 10px;
-      padding: 14px;
-      margin-bottom: 14px;
+      padding: 12px;
+      margin-bottom: 12px;
       page-break-inside: avoid;
     }
 
@@ -150,8 +159,8 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 12px 0;
-      font-size: 9pt;
+      margin: 10px 0;
+      font-size: 8.5pt;
       page-break-inside: avoid;
     }
 
@@ -159,16 +168,16 @@
       background: #0284c7;
       color: #ffffff;
       text-align: left;
-      padding: 8px 10px;
+      padding: 7px 9px;
       font-weight: 700;
       border: 1px solid #0284c7;
     }
 
     td {
-      padding: 7px 10px;
+      padding: 6px 9px;
       border: 1px solid #e2e8f0;
       color: #334155;
-      vertical-align: top;
+      vertical-align: middle;
     }
 
     tr:nth-child(even) td {
@@ -178,24 +187,24 @@
     /* Code Blocks */
     code {
       font-family: 'JetBrains Mono', Consolas, monospace;
-      font-size: 8.5pt;
+      font-size: 8pt;
       background: #f1f5f9;
       color: #0284c7;
-      padding: 2px 5px;
+      padding: 2px 4px;
       border-radius: 4px;
       border: 1px solid #e2e8f0;
     }
 
     pre {
       font-family: 'JetBrains Mono', Consolas, monospace;
-      font-size: 8.5pt;
+      font-size: 8pt;
       background: #0f172a;
       color: #f8fafc;
-      padding: 12px;
+      padding: 10px;
       border-radius: 8px;
       overflow-x: auto;
-      margin: 8px 0 12px 0;
-      line-height: 1.45;
+      margin: 6px 0 10px 0;
+      line-height: 1.4;
       page-break-inside: avoid;
     }
 
@@ -212,11 +221,23 @@
 
     .footer-note {
       text-align: center;
-      font-size: 8.5pt;
+      font-size: 8pt;
       color: #94a3b8;
-      margin-top: 24px;
+      margin-top: 20px;
       border-top: 1px solid #e2e8f0;
       padding-top: 8px;
+    }
+
+    .btn-link {
+      display: inline-block;
+      background: #0284c7;
+      color: #ffffff !important;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 8pt;
+      margin-top: 4px;
     }
   </style>
 </head>
@@ -224,175 +245,306 @@
 
   <!-- COVER HEADER -->
   <div class="header-box">
-    <div class="badge">ReachInbox Technical Assignment</div>
-    <h1>Full-Stack Email Job Scheduler</h1>
-    <div class="subtitle">Production-Grade Delayed Email Queue, Ethereal SMTP & React SaaS Dashboard</div>
+    <div class="badge">ReachInbox Software Development Intern Assignment</div>
+    <h1>Full-Stack Email Job Scheduler & Dashboard</h1>
+    <div class="subtitle">Complete Technical Specification, Source Code Links, Credentials & Architecture Guide</div>
 
     <div class="meta-grid">
-      <div class="meta-item"><strong>Candidate:</strong> Salman (AbdulSalman25)</div>
-      <div class="meta-item"><strong>Role:</strong> Software Development Intern</div>
-      <div class="meta-item"><strong>Repository:</strong> <a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler" style="color: #0284c7; text-decoration: none; font-weight: bold;">github.com/AbdulSalman25/reachinbox-email-scheduler</a></div>
-      <div class="meta-item"><strong>Date:</strong> August 19, 2026 · Status: 100% Complete</div>
+      <div class="meta-item"><strong>Developer Name:</strong> Salman (AbdulSalman25)</div>
+      <div class="meta-item"><strong>Project Status:</strong> 100% Complete & Verified</div>
+      <div class="meta-item"><strong>GitHub Repository:</strong> <a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler" target="_blank">github.com/AbdulSalman25/reachinbox-email-scheduler</a></div>
+      <div class="meta-item"><strong>Live Dev URL:</strong> <a href="http://localhost:5173" target="_blank">http://localhost:5173</a></div>
     </div>
   </div>
 
-  <!-- SECTION 1: PROBLEM STATEMENT -->
-  <h2>1. Problem Statement & Assignment Objectives</h2>
-  <p>
-    At <strong>ReachInbox.ai</strong>, reliable scheduling and automated dispatch of cold email outreach sequences at scale is a mission-critical infrastructure requirement. Simple in-memory timers (<code>setTimeout</code>) or cron jobs fail in real production because:
-  </p>
-  <ul>
-    <li><strong>Server Crashes / Restarts:</strong> In-memory queues lose all scheduled tasks immediately on process restart.</li>
-    <li><strong>Cron Inefficiency:</strong> Cron jobs poll databases on fixed intervals, creating race conditions, duplicate dispatches, and CPU waste.</li>
-    <li><strong>Rate Limiting & Burst Protection:</strong> Without queue-level throttling, sending bulk emails triggers SMTP provider rate limits.</li>
-  </ul>
-  <p>
-    <strong>Core Assignment Goal:</strong> Build a fault-tolerant email scheduler service and modern SaaS dashboard that accepts email scheduling requests via REST API & UI, persists them using <strong>BullMQ + Redis</strong> delayed sorted sets (surviving abrupt restarts), sends via <strong>Ethereal Fake SMTP</strong> with live rendered web preview links, and provides full lifecycle controls (Reschedule, Cancel, Throttling).
-  </p>
-
-  <!-- SECTION 2: SYSTEM ARCHITECTURE -->
-  <h2>2. System Architecture & Tech Stack</h2>
-  <div class="card card-highlight">
-    <strong>Architecture Diagram Flow:</strong><br>
-    <code>[React Client UI]</code> ➔ <code>[Express REST API (/api/emails/schedule)]</code> ➔ <code>[Prisma ORM (dev.db)]</code> ➔ <code>[Redis Sorted Sets (BullMQ)]</code> ➔ <code>[BullMQ Worker Concurrency 5]</code> ➔ <code>[Nodemailer + Ethereal SMTP]</code> ➔ <code>[Live Web Preview URL]</code>
-  </div>
+  <!-- SECTION 1: MASTER REPOSITORY & CODE LINKS -->
+  <h2>1. 🔗 Master GitHub Repository & Direct Code Links</h2>
+  <p>Every file is publicly accessible with full version history and tests. Click any link below to view the source code directly on GitHub:</p>
 
   <table>
     <thead>
       <tr>
-        <th>Layer</th>
-        <th>Technology</th>
-        <th>Key Purpose in Solution</th>
+        <th>Component</th>
+        <th>File Path</th>
+        <th>Direct Clickable GitHub Link</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Backend API</strong></td>
-        <td>Node.js, Express.js, TypeScript</td>
-        <td>Type-safe REST API with Zod schema validation and structured error handling.</td>
+        <td><strong>Repository Root</strong></td>
+        <td><code>/</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler" target="_blank">https://github.com/AbdulSalman25/reachinbox-email-scheduler</a></td>
       </tr>
       <tr>
-        <td><strong>Job Queue Engine</strong></td>
-        <td>BullMQ + ioredis (Redis 7+)</td>
-        <td>Persistent delayed job scheduling using Redis sorted sets (<code>zset</code>). Zero cron jobs.</td>
+        <td><strong>Backend Server Entry</strong></td>
+        <td><code>backend/src/index.ts</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/backend/src/index.ts" target="_blank">View index.ts on GitHub</a></td>
       </tr>
       <tr>
-        <td><strong>Database & ORM</strong></td>
-        <td>Prisma ORM (SQLite / PostgreSQL)</td>
-        <td>Tracks job metadata, recipient logs, retry counters, and Ethereal preview links.</td>
+        <td><strong>BullMQ Queue Service</strong></td>
+        <td><code>backend/src/services/queue.service.ts</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/backend/src/services/queue.service.ts" target="_blank">View queue.service.ts on GitHub</a></td>
       </tr>
       <tr>
-        <td><strong>Fake SMTP Service</strong></td>
-        <td>Nodemailer + Ethereal Email</td>
-        <td>Transports real emails to Ethereal test inbox and captures live preview URLs.</td>
+        <td><strong>Email Worker (SMTP)</strong></td>
+        <td><code>backend/src/workers/email.worker.ts</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/backend/src/workers/email.worker.ts" target="_blank">View email.worker.ts on GitHub</a></td>
       </tr>
       <tr>
-        <td><strong>Frontend Dashboard</strong></td>
-        <td>React 18, Vite, Tailwind CSS</td>
-        <td>White & Sky Blue theme matching ReachInbox SaaS UI with metric cards & pill tabs.</td>
+        <td><strong>Email Logic & Throttling</strong></td>
+        <td><code>backend/src/services/email.service.ts</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/backend/src/services/email.service.ts" target="_blank">View email.service.ts on GitHub</a></td>
+      </tr>
+      <tr>
+        <td><strong>Controller & Validation</strong></td>
+        <td><code>backend/src/controllers/email.controller.ts</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/backend/src/controllers/email.controller.ts" target="_blank">View email.controller.ts on GitHub</a></td>
+      </tr>
+      <tr>
+        <td><strong>Database Schema (Prisma)</strong></td>
+        <td><code>backend/prisma/schema.prisma</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/backend/prisma/schema.prisma" target="_blank">View schema.prisma on GitHub</a></td>
+      </tr>
+      <tr>
+        <td><strong>Automated Test Suite</strong></td>
+        <td><code>backend/tests/scheduler.test.ts</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/backend/tests/scheduler.test.ts" target="_blank">View scheduler.test.ts on GitHub</a></td>
+      </tr>
+      <tr>
+        <td><strong>Frontend Dashboard App</strong></td>
+        <td><code>frontend/src/App.tsx</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/frontend/src/App.tsx" target="_blank">View App.tsx on GitHub</a></td>
+      </tr>
+      <tr>
+        <td><strong>Campaign Compose Modal</strong></td>
+        <td><code>frontend/src/components/ScheduleModal.tsx</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/frontend/src/components/ScheduleModal.tsx" target="_blank">View ScheduleModal.tsx on GitHub</a></td>
+      </tr>
+      <tr>
+        <td><strong>Scheduled Emails Table</strong></td>
+        <td><code>frontend/src/components/ScheduledTable.tsx</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/frontend/src/components/ScheduledTable.tsx" target="_blank">View ScheduledTable.tsx on GitHub</a></td>
+      </tr>
+      <tr>
+        <td><strong>Sent Emails Table & Links</strong></td>
+        <td><code>frontend/src/components/SentTable.tsx</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/frontend/src/components/SentTable.tsx" target="_blank">View SentTable.tsx on GitHub</a></td>
+      </tr>
+      <tr>
+        <td><strong>Top 5 Metric Cards</strong></td>
+        <td><code>frontend/src/components/StatsCards.tsx</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/frontend/src/components/StatsCards.tsx" target="_blank">View StatsCards.tsx on GitHub</a></td>
+      </tr>
+      <tr>
+        <td><strong>Navigation Bar</strong></td>
+        <td><code>frontend/src/components/Navbar.tsx</code></td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler/blob/main/frontend/src/components/Navbar.tsx" target="_blank">View Navbar.tsx on GitHub</a></td>
       </tr>
     </tbody>
   </table>
 
-  <!-- SECTION 3: SERVER RESTART RESILIENCE -->
-  <h2>3. How Server Restart Resilience Works (BullMQ + Redis)</h2>
-  <div class="card card-success">
-    <strong>Key Architectural Advantage:</strong> Unlike memory queues, BullMQ writes delayed tasks directly to Redis as sorted sets where the score is the target Unix execution timestamp (<code>now + delayMs</code>).
+  <!-- SECTION 2: CREDENTIALS & SERVICE CONFIGURATIONS -->
+  <h2>2. 🔑 All Credentials & Service Configurations</h2>
+  <div class="card card-highlight">
+    <strong>Security Note:</strong> These test credentials are pre-configured for running the application in local development and automated testing environments.
   </div>
-  <ol>
-    <li><strong>Job Enqueueing:</strong> When an email is scheduled, BullMQ computes <code>delay = scheduledAt - now</code> and persists the job payload in Redis under key <code>bull:email-scheduler-queue:delayed</code>.</li>
-    <li><strong>Crash & Restart:</strong> If the Express server or Worker process terminates abruptly, Redis persistence (<code>AOF / RDB</code>) retains the delayed sorted set unharmed.</li>
-    <li><strong>Worker Discovery:</strong> When the backend server restarts, the BullMQ Worker automatically reconnects to Redis, re-evaluates the delayed sorted set, and executes the pending jobs at the exact target time.</li>
-    <li><strong>Zero Duplicates:</strong> Distributed locks (atomic Lua scripts) ensure that only a single worker acquires and processes each email job once.</li>
-  </ol>
-
-  <div class="page-break"></div>
-
-  <!-- SECTION 4: STEP-BY-STEP IMPLEMENTATION LOG -->
-  <h2>4. Step-by-Step Implementation Journey</h2>
-
-  <h3>Step 1: Project Scaffolding & Monorepo Setup</h3>
-  <p>Initialized a unified TypeScript monorepo with <code>backend/</code> and <code>frontend/</code> directories, configured TypeScript in strict mode, and set up Docker Compose for Redis and PostgreSQL.</p>
-
-  <h3>Step 2: Database Schema & Prisma Configuration</h3>
-  <p>Created the <code>EmailJob</code> model in <code>backend/prisma/schema.prisma</code> tracking <code>recipient</code>, <code>senderProfile</code>, <code>subject</code>, <code>body</code>, <code>scheduledAt</code>, <code>sentAt</code>, <code>status</code> (SCHEDULED, PROCESSING, SENT, FAILED, CANCELLED), <code>etherealPreviewUrl</code>, and <code>attempts</code>.</p>
-
-  <h3>Step 3: Redis Connection & BullMQ Queue</h3>
-  <p>Configured <code>src/config/redis.ts</code> and <code>src/services/queue.service.ts</code> with retry policies, backoff options (3 attempts, 5s delay), and job lifecycle methods (schedule, reschedule, remove).</p>
-
-  <h3>Step 4: Background Worker & Ethereal SMTP</h3>
-  <p>Built <code>src/workers/email.worker.ts</code> and <code>src/config/mailer.ts</code>. The worker listens on BullMQ, updates status to <code>PROCESSING</code>, dispatches the email via Nodemailer, extracts the Ethereal web URL (<code>nodemailer.getTestMessageUrl(info)</code>), and records status as <code>SENT</code>.</p>
-
-  <h3>Step 5: Throttling & Bulk Lead Staggering</h3>
-  <p>Enhanced <code>src/services/email.service.ts</code> to support CSV/bulk imports with <code>minDelayPerSend</code> staggering (e.g. 2s between leads) and computed hourly sending limits (200/hr quota telemetry).</p>
-
-  <h3>Step 6: Automated End-to-End Verification Suite</h3>
-  <p>Built <code>backend/tests/scheduler.test.ts</code> verifying delayed queueing, real-time cancellation, rescheduling, SMTP delivery with live URLs, and <strong>simulated worker crash/restart recovery</strong> (100% passing).</p>
-
-  <h3>Step 7: White & Sky Blue Modern Frontend</h3>
-  <p>Engineered a sleek React + Tailwind CSS dashboard with ReachInbox branding, center pill switcher (<code>Scheduled Emails</code> vs <code>Sent Emails</code>), 5 metric cards, CSV upload campaign modal, and live <code>View Email ↗</code> links.</p>
-
-  <h3>Step 8: Git & GitHub Publishing</h3>
-  <p>Configured clean repository at <strong><code>https://github.com/AbdulSalman25/reachinbox-email-scheduler</code></strong> authored solely by <strong>AbdulSalman25</strong>.</p>
-
-  <!-- SECTION 5: CREDENTIALS & COMMANDS CHEAT SHEET -->
-  <h2>5. Credentials, URLs & Command Reference</h2>
 
   <table>
     <thead>
       <tr>
-        <th>Resource</th>
-        <th>Value / Link</th>
-        <th>Notes</th>
+        <th>Service</th>
+        <th>Parameter / Variable</th>
+        <th>Value / Credential</th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>GitHub Repository</strong></td>
-        <td><code>https://github.com/AbdulSalman25/reachinbox-email-scheduler</code></td>
-        <td>Public repository with full code, tests & README</td>
-      </tr>
-      <tr>
-        <td><strong>Frontend Dashboard</strong></td>
-        <td><code>http://localhost:5173</code></td>
-        <td>Vite React dev server with proxy to backend</td>
-      </tr>
-      <tr>
-        <td><strong>Backend API</strong></td>
-        <td><code>http://localhost:5001</code></td>
-        <td>Express.js API server & static asset host</td>
+        <td><strong>GitHub Account</strong></td>
+        <td>Username / Profile</td>
+        <td><code>AbdulSalman25</code></td>
+        <td>Sole author and owner of the repository</td>
       </tr>
       <tr>
         <td><strong>Ethereal SMTP Host</strong></td>
+        <td><code>SMTP_HOST</code> / <code>SMTP_PORT</code></td>
         <td><code>smtp.ethereal.email:587</code></td>
-        <td>Automatic test account provisioned on startup</td>
+        <td>Fake SMTP server that receives and renders test emails</td>
       </tr>
       <tr>
-        <td><strong>Ethereal Web Viewer</strong></td>
-        <td><code>https://ethereal.email/login</code></td>
-        <td>Live preview links generated for every send</td>
+        <td><strong>Ethereal User</strong></td>
+        <td><code>SMTP_USER</code></td>
+        <td><code>mgsdbbqo3hec4lsc@ethereal.email</code></td>
+        <td>Auto-provisioned Ethereal test inbox user</td>
+      </tr>
+      <tr>
+        <td><strong>Ethereal Pass</strong></td>
+        <td><code>SMTP_PASS</code></td>
+        <td><code>EXhPNSpg9dUDaz9GHE</code></td>
+        <td>Ethereal SMTP authentication password</td>
+      </tr>
+      <tr>
+        <td><strong>Ethereal Web Portal</strong></td>
+        <td>Web Login URL</td>
+        <td><a href="https://ethereal.email/login" target="_blank">https://ethereal.email/login</a></td>
+        <td>Web interface to inspect received messages</td>
+      </tr>
+      <tr>
+        <td><strong>Live Sent Email 1</strong></td>
+        <td>Sample Preview URL</td>
+        <td><a href="https://ethereal.email/message/aoXVyLqvTjI--A2WaoXV7mJrP7FcFNVsAAAAAuLzTb5AW6embnkQdEB9yLk" target="_blank">Open Live Email #1 Preview</a></td>
+        <td>Delivered to alex.lead1@example.com</td>
+      </tr>
+      <tr>
+        <td><strong>Live Sent Email 2</strong></td>
+        <td>Sample Preview URL</td>
+        <td><a href="https://ethereal.email/message/aoXVyLqvTjI--A2WaoXV7Cgr9i3U1vIpAAAAAdWuOjtPQwFrQDdMlY6y7Xg" target="_blank">Open Live Email #2 Preview</a></td>
+        <td>Delivered to sarah.lead2@example.com</td>
+      </tr>
+      <tr>
+        <td><strong>Redis Cache / Queue</strong></td>
+        <td><code>REDIS_HOST</code> / <code>REDIS_PORT</code></td>
+        <td><code>127.0.0.1:6379</code></td>
+        <td>Stores persistent BullMQ delayed job sorted sets (zset)</td>
+      </tr>
+      <tr>
+        <td><strong>Database</strong></td>
+        <td><code>DATABASE_URL</code></td>
+        <td><code>file:./dev.db</code> (SQLite via Prisma)</td>
+        <td>Persistent SQL storage for jobs, history, and status</td>
+      </tr>
+      <tr>
+        <td><strong>Frontend Dev URL</strong></td>
+        <td>Client Dashboard</td>
+        <td><a href="http://localhost:5173" target="_blank">http://localhost:5173</a></td>
+        <td>Vite React application in White & Sky Blue theme</td>
+      </tr>
+      <tr>
+        <td><strong>Backend API URL</strong></td>
+        <td>Server Port</td>
+        <td><a href="http://localhost:5001" target="_blank">http://localhost:5001</a></td>
+        <td>Express.js API (Health check: <code>/api/health</code>)</td>
       </tr>
     </tbody>
   </table>
 
-  <h3>Terminal Setup & Run Commands</h3>
-  <pre><code># 1. Start Redis
-brew services start redis   # or: docker compose up -d redis
+  <div class="page-break"></div>
 
-# 2. Run Backend (Port 5001)
-cd backend && npm run dev
+  <!-- SECTION 3: SYSTEM ARCHITECTURE & CRASH RESILIENCE -->
+  <h2>3. 🛡 System Architecture & Crash Resilience Mechanism</h2>
+  <div class="card card-success">
+    <strong>Why BullMQ + Redis instead of Cron Jobs?</strong><br>
+    Cron jobs (<code>node-cron</code>) poll databases on fixed tick intervals. Under high scale, this causes CPU thrashing, duplicate dispatches across multiple backend instances, and lost tasks if the server is down during the cron tick. BullMQ uses Redis <strong>sorted sets (<code>zset</code>)</strong> where delayed jobs are indexed by target Unix epoch timestamp.
+  </div>
 
-# 3. Run Frontend (Port 5173)
-cd frontend && npm run dev
+  <h3>How Server Restarts and Crashes are Handled:</h3>
+  <ol>
+    <li><strong>Delayed Job Enqueueing:</strong> When <code>POST /api/emails/schedule</code> is called, BullMQ computes <code>delay = scheduledAt - now</code> and writes the job payload to Redis sorted set <code>bull:email-scheduler-queue:delayed</code>.</li>
+    <li><strong>Crash Survival:</strong> If the server or worker crashes, Redis persistence (<code>AOF / RDB</code>) retains the job unharmed.</li>
+    <li><strong>Automatic Worker Recovery:</strong> Upon rebooting, the BullMQ Worker re-attaches to the queue, discovers the pending delayed tasks, and fires them precisely when the timestamp is reached.</li>
+    <li><strong>Atomic Distributed Locks:</strong> BullMQ acquires atomic Lua lock leases (<code>lockDuration: 30000ms</code>), guaranteeing that only one worker instance executes each email job with <strong>zero duplicates</strong>.</li>
+  </ol>
 
-# 4. Run Automated Test Suite
-cd backend && npm test</code></pre>
+  <!-- SECTION 4: RATE LIMITING & THROTTLING LOGIC -->
+  <h2>4. ⚡ Rate Limiting & Throttling Engine</h2>
+  <p>To comply with SMTP provider limits and prevent spam flags, two throttling layers are enforced:</p>
+  <ul>
+    <li><strong>Min Delay per Send (s):</strong> When multiple recipient leads are scheduled in a batch, the engine applies staggered delays:
+      <pre><code>itemDelayMs = baseDelayMs + (index * minDelayPerSend * 1000);</code></pre>
+    </li>
+    <li><strong>Hourly Quota (200 emails/hr):</strong> Tracks dispatches in the current 60-minute window and displays a real-time progress bar on the dashboard (<code>0 / 200 sends left</code>).</li>
+  </ul>
+
+  <!-- SECTION 5: STEP-BY-STEP BUILD LOG -->
+  <h2>5. 🛠 Step-by-Step Implementation Log</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Phase</th>
+        <th>Steps Executed</th>
+        <th>Files Created / Modified</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Phase 1: Scaffolding</strong></td>
+        <td>Monorepo structure, TypeScript strict configs, Docker Compose for Redis & PostgreSQL</td>
+        <td><code>package.json</code>, <code>docker-compose.yml</code>, <code>backend/tsconfig.json</code></td>
+      </tr>
+      <tr>
+        <td><strong>Phase 2: Database Schema</strong></td>
+        <td>Created <code>EmailJob</code> Prisma model with status enum (SCHEDULED, PROCESSING, SENT, FAILED, CANCELLED)</td>
+        <td><code>backend/prisma/schema.prisma</code>, <code>backend/prisma/dev.db</code></td>
+      </tr>
+      <tr>
+        <td><strong>Phase 3: Queue & Worker</strong></td>
+        <td>Configured Redis connection, BullMQ queue, 3-attempt exponential backoff retry, and worker</td>
+        <td><code>backend/src/config/redis.ts</code>, <code>backend/src/services/queue.service.ts</code>, <code>backend/src/workers/email.worker.ts</code></td>
+      </tr>
+      <tr>
+        <td><strong>Phase 4: SMTP Transporter</strong></td>
+        <td>Connected Nodemailer with Ethereal SMTP, auto-generating test account and capturing live preview links</td>
+        <td><code>backend/src/config/mailer.ts</code></td>
+      </tr>
+      <tr>
+        <td><strong>Phase 5: Controller & Services</strong></td>
+        <td>REST endpoints for schedule, reschedule, cancel, list, stats, and bulk staggered scheduling</td>
+        <td><code>backend/src/services/email.service.ts</code>, <code>backend/src/controllers/email.controller.ts</code>, <code>backend/src/routes/email.routes.ts</code></td>
+      </tr>
+      <tr>
+        <td><strong>Phase 6: Automated Testing</strong></td>
+        <td>End-to-end test suite verifying scheduling, cancellation, rescheduling, delivery, and restart survival</td>
+        <td><code>backend/tests/scheduler.test.ts</code> (100% passing)</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 7: Frontend UI</strong></td>
+        <td>Engineered White & Sky Blue dashboard matching ReachInbox layout (pill switcher, 5 metric cards, CSV upload modal)</td>
+        <td><code>frontend/src/App.tsx</code>, <code>frontend/src/components/*</code>, <code>frontend/tailwind.config.js</code></td>
+      </tr>
+      <tr>
+        <td><strong>Phase 8: GitHub Deployment</strong></td>
+        <td>Initialized git repository, authored solely by AbdulSalman25, and pushed to GitHub</td>
+        <td><a href="https://github.com/AbdulSalman25/reachinbox-email-scheduler" target="_blank">github.com/AbdulSalman25/reachinbox-email-scheduler</a></td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="page-break"></div>
 
-  <!-- SECTION 6: TECHNICAL INTERVIEW Q&A -->
-  <h2>6. Technical Interview & Viva Guide</h2>
+  <!-- SECTION 6: KEY CODE SNIPPETS -->
+  <h2>6. 💻 Core Code Highlights</h2>
 
+  <h3>1. BullMQ Delayed Queue Enqueueing (<code>queue.service.ts</code>)</h3>
+  <pre><code>export const addDelayedEmailJob = async (jobData: EmailJobPayload, delayMs: number) => {
+  return await emailQueue.add('send-scheduled-email', jobData, {
+    jobId: jobData.emailId,
+    delay: Math.max(0, delayMs),
+    attempts: 3,
+    backoff: { type: 'exponential', delay: 5000 },
+    removeOnComplete: false,
+    removeOnFail: false,
+  });
+};</code></pre>
+
+  <h3>2. Background Worker Processing & Ethereal Link Generation (<code>email.worker.ts</code>)</h3>
+  <pre><code>export const initEmailWorker = () => {
+  const worker = new Worker('email-scheduler-queue', async (job: Job&lt;EmailJobPayload&gt;) => {
+    const { emailId, to, subject, body, senderProfile } = job.data;
+    await prisma.emailJob.update({ where: { id: emailId }, data: { status: 'PROCESSING' } });
+
+    const info = await sendMail({ from: senderProfile, to, subject, text: body });
+    const previewUrl = nodemailer.getTestMessageUrl(info) || null;
+
+    await prisma.emailJob.update({
+      where: { id: emailId },
+      data: { status: 'SENT', sentAt: new Date(), etherealPreviewUrl: previewUrl, etherealMessageId: info.messageId }
+    });
+  }, { connection: getRedisConnection(), concurrency: 5 });
+  return worker;
+};</code></pre>
+
+  <!-- SECTION 7: INTERVIEW VIVA Q&A -->
+  <h2>7. 🎯 Technical Interview Q&A Reference</h2>
   <div class="card card-highlight">
     <strong>Q1: Why BullMQ + Redis over Cron Jobs (node-cron)?</strong><br>
     <em>Answer:</em> Cron jobs are interval-based pollers that query the DB repeatedly, wasting CPU cycles and causing synchronization bottlenecks across multi-instance clusters. BullMQ uses Redis sorted sets to hold delayed jobs and activates workers via event-driven pub/sub and atomic Lua scripts precisely when the Unix timestamp elapses, with built-in concurrency control and crash recovery.
@@ -408,25 +560,13 @@ cd backend && npm test</code></pre>
     <em>Answer:</em> The scheduler computes staggered delay offsets for batch leads: <code>itemDelayMs = baseDelayMs + (index * minDelaySeconds * 1000)</code>. Additionally, the backend tracks hourly quota dispatches and blocks incoming schedules that exceed the 200 emails/hour threshold.
   </div>
 
-  <div class="card card-highlight">
-    <strong>Q4: How do you verify emails without hitting spam filters or real users?</strong><br>
-    <em>Answer:</em> We integrated Nodemailer with Ethereal SMTP test accounts. Ethereal simulates full RFC-compliant SMTP handshakes, accepts emails, and generates a live rendered web viewer URL (<code>nodemailer.getTestMessageUrl(info)</code>) displayed directly in the dashboard UI.
-  </div>
-
-  <!-- SECTION 7: 2-MINUTE DEMO SCRIPT -->
-  <h2>7. 2-Minute Video Demo Script</h2>
+  <!-- SECTION 8: 2-MINUTE DEMO SCRIPT -->
+  <h2>8. 🎙 2-Minute Video Demo Script</h2>
   <div class="card card-success">
-    <strong>Step 1: Introduction (0:00 - 0:30)</strong><br>
-    "Hi, I'm Salman. This is my submission for the ReachInbox Full-Stack Email Job Scheduler assignment. The system is built with TypeScript, Express, BullMQ, Redis, Prisma, and a React Tailwind dashboard."
-    <br><br>
-    <strong>Step 2: Architecture & Queue Explanation (0:30 - 1:00)</strong><br>
-    "Instead of fragile cron jobs or in-memory timers, all scheduling is handled by persistent BullMQ delayed jobs backed by Redis sorted sets. This guarantees that jobs survive server crashes and restarts without duplicate sends or lost tasks."
-    <br><br>
-    <strong>Step 3: Live Dashboard Demo (1:00 - 1:45)</strong><br>
-    "Here on the dashboard at <code>localhost:5173</code>, I click <code>+ Compose Email</code>, auto-fill sample leads, set a 30-second delay with a 2-second throttle, and click Schedule. We can see the real-time countdown in the Scheduled Emails tab. Once processed, it moves to the Sent Emails tab, and clicking <code>View Email ↗</code> opens the live rendered HTML email in Ethereal's web viewer."
-    <br><br>
-    <strong>Step 4: Tests & Wrap Up (1:45 - 2:00)</strong><br>
-    "All backend APIs, lifecycle actions (reschedule, cancel), and server restart survival are verified with a 100% passing automated test suite. The complete codebase is available on my GitHub at <code>github.com/AbdulSalman25/reachinbox-email-scheduler</code>. Thank you!"
+    <strong>0:00 - 0:30 (Intro):</strong> "Hi, I'm Salman. This is my submission for the ReachInbox Full-Stack Email Job Scheduler assignment. The system is built with TypeScript, Express, BullMQ, Redis, Prisma, and a React Tailwind dashboard."<br><br>
+    <strong>0:30 - 1:00 (Architecture):</strong> "Instead of fragile cron jobs or in-memory timers, all scheduling is handled by persistent BullMQ delayed jobs backed by Redis sorted sets. This guarantees that jobs survive server crashes and restarts without duplicate sends or lost tasks."<br><br>
+    <strong>1:00 - 1:45 (Live Demo):</strong> "Here on the dashboard at <code>localhost:5173</code>, I click <code>+ Compose Email</code>, auto-fill sample leads, set a 30-second delay with a 2-second throttle, and click Schedule. We can see the real-time countdown in the Scheduled Emails tab. Once processed, it moves to the Sent Emails tab, and clicking <code>View Email ↗</code> opens the live rendered HTML email in Ethereal's web viewer."<br><br>
+    <strong>1:45 - 2:00 (Wrap Up):</strong> "All backend APIs, lifecycle actions (reschedule, cancel), and server restart survival are verified with a 100% passing automated test suite. The complete codebase is available on my GitHub at <code>github.com/AbdulSalman25/reachinbox-email-scheduler</code>. Thank you!"
   </div>
 
   <div class="footer-note">
